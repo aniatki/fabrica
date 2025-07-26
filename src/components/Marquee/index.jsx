@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import styles from "./Marquee.module.css"
 
 export default function Marquee() {
   const marqueeRef = useRef(null)
@@ -9,8 +8,8 @@ export default function Marquee() {
   useEffect(() => {
     const parent = marqueeRef.current
     const clone = parent.innerHTML
-    parent.insertAdjacentHTML('beforeend', clone)
-    parent.insertAdjacentHTML('beforeend', clone)
+
+    new Array(10).fill(0).forEach(_ => parent.insertAdjacentHTML('beforeend', clone))
 
     const firstElement = parent.children[0]
     let i = 0
@@ -43,7 +42,7 @@ export default function Marquee() {
 
   return (
     <div
-      className={`marquee col-span-full bg-black text-white py-1 overflow-hidden whitespace-nowrap ${styles.marquee}`}
+      className={`marquee col-span-full bg-black text-white py-1 overflow-hidden whitespace-nowrap`}
       ref={marqueeRef}
     >
       <span 
