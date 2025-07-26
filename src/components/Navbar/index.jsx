@@ -32,17 +32,14 @@ export default function NavBar() {
 
     return (
         <nav className='col-span-8 md:col-start-2 text-gray-800'>
-
             <ul className='flex justify-between items-center h-20'>
-
                 <li className="text-2xl font-bold tracking-tighter"><a href="">fabricio's tattoo</a></li>
-
                 {navItems.map((el, index) => (
                     <li key={index}>
                         <a
                             onClick={() => setOpen(false)}
                             href=""
-                            className='hidden font-semibold tracking-tight sm:block'
+                            className='hidden font-semibold tracking-tight sm:block hover:text-gray-400 transition'
                         >{el}
                         </a>
                     </li>
@@ -56,14 +53,12 @@ export default function NavBar() {
                             <span className="w-10 h-1 bg-black rounded-full transition-transform duration-300"></span>
                             <span className="w-10 ml-4 h-1 bg-black rounded-full transition-transform duration-300"></span>
                         </button>
-
                         {open && (
                             <>
                                 <div
                                     className="fixed top-0 left-0 w-full h-full bg-transparent z-40"
                                     onClick={() => setOpen(false)}
                                 />
-
                                 <div
                                     ref={menuRef}
                                     className="fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-50"
