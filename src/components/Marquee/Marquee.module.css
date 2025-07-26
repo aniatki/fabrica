@@ -1,0 +1,17 @@
+.marquee {
+    position: relative;
+}
+
+.marquee::after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-image: 
+        linear-gradient(
+            to left,
+            rgba(0,0,0,.7) 0%, 
+            transparent 25%, 
+            transparent 75%, 
+            rgba(0,0,0,.7) 100%
+        );
+}

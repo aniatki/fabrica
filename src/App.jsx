@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Marquee from "./components/Marquee/Marquee.jsx"
+import NavBar from "./components/NavBar.jsx"
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='grid grid-cols-4 md:grid-cols-10 overflow-hidden bg-gray-100'>
+      <Marquee />
+
+      <NavBar />
+
+      <main className='col-span-full text-balance text-center pt-28'>
+        <h1 className='text-6xl text-gray-800 font-semibold leading-12 tracking-tight mx-auto mb-4 max-w-7xl '>An artist making dreams and ideas come true on skin.</h1>
+        <h4 className='text-xl font-medium tracking-tighter text-gray-700'>No fluff, just results. Thoughtful design that makes your skin a work of art.</h4>
+      </main>
+      
+      <div className="image"></div>
+    </div>
   )
 }
-
-export default App
