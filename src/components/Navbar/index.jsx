@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
+import signature from "/white.webp"
+// import styles from "./NavBar.module.css"
 
 export default function NavBar() {
-    const navItems = ["Studio", "Projects", "Contact", "About me"]
+    const navItems = ["Projetos", "Contato", "Sobre mim"]
     const [open, setOpen] = useState(false)
     const menuRef = useRef(null)
 
@@ -31,15 +33,17 @@ export default function NavBar() {
     }, [open])
 
     return (
-        <nav className='col-span-8 md:col-start-2 text-gray-800'>
+        <nav className='col-span-full px-2 md:px-0 md:col-span-8 md:col-start-2 text-gray-800'>
             <ul className='flex justify-between items-center h-20'>
-                <li className="text-2xl font-bold tracking-tighter"><a href="">fabricio's tattoo</a></li>
+                <li className={`text-2xl font-bold tracking-tighter hover:text-gray-500 flex items-center gap-2 transition`}>
+                    <a href=""><img className="w-12 mix-blend-darken hover:scale-110 transition" src={signature} alt="" /></a>
+                </li>
                 {navItems.map((el, index) => (
                     <li key={index}>
                         <a
                             onClick={() => setOpen(false)}
                             href=""
-                            className='hidden font-semibold tracking-tight sm:block hover:text-gray-400 transition'
+                            className='hidden font-semibold tracking-tight sm:block hover:text-gray-500 transition'
                         >{el}
                         </a>
                     </li>
@@ -50,8 +54,8 @@ export default function NavBar() {
                             onClick={() => setOpen(!open)}
                             className="flex flex-col gap-2 p-2 rounded focus:outline-none cursor-pointer"
                         >
-                            <span className="w-10 h-1 bg-black rounded-full transition-transform duration-300"></span>
-                            <span className="w-10 ml-4 h-1 bg-black rounded-full transition-transform duration-300"></span>
+                            <span className="w-10 h-1 bg-black rounded-full transition-transform"></span>
+                            <span className="w-10 ml-4 h-1 bg-black rounded-full transition-transform"></span>
                         </button>
                         {open && (
                             <>
@@ -69,7 +73,7 @@ export default function NavBar() {
                                                 <a
                                                     href="#"
                                                     onClick={() => setOpen(false)}
-                                                    className="text-6xl font-semibold hover:text-gray-500"
+                                                    className={`text-5xl font-semibold tracking-tighter hover:text-gray-500 transition`}
                                                 >
                                                     {el}
                                                 </a>

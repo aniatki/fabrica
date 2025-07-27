@@ -1,5 +1,6 @@
 .marquee {
     position: relative;
+    display: flex;
 }
 
 .marquee::after{

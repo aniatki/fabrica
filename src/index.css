@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+    --color-amber-650: oklch(59.4% 0.188 48.318);
+}
+
 html {
     font-family: "Inter", system-ui, sans-serif;
 }

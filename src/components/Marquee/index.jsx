@@ -1,23 +1,22 @@
 import { useEffect, useRef } from 'react'
+import styles from "./Marquee.module.css"
 
 export default function Marquee() {
   const marqueeRef = useRef(null)
   const speed = .1
   let marqueeInterval = useRef(null)
-
+  
   useEffect(() => {
     const parent = marqueeRef.current
     const clone = parent.innerHTML
 
     new Array(10).fill(0).forEach(_ => parent.insertAdjacentHTML('beforeend', clone))
 
-    const firstElement = parent.children[0]
     let i = 0
-
     const startMarquee = () => {
       marqueeInterval.current = setInterval(() => {
-        firstElement.style.marginLeft = `-${i}px`
-        if (i > firstElement.clientWidth) {
+        parent.style.transform = `translateX(-${i}px)`
+        if (i > parent.clientWidth) {
           i = 0
         }
         i += speed
@@ -42,19 +41,21 @@ export default function Marquee() {
 
   return (
     <div
-      className={`marquee col-span-full bg-black text-white py-1 overflow-hidden whitespace-nowrap`}
-      ref={marqueeRef}
+      className={`${styles.marquee} col-span-full min-w-full bg-black text-white py-1 overflow-hidden whitespace-nowrap`}
+      
     >
-      <span 
-        className="
-            text-xs 
-            font-extrabold 
-            tracking-[.35em] 
-            inline-block
-            mr-8
-            ">
-        PET TATTOO R$500
-      </span>
+      <div ref={marqueeRef}>
+        <span
+          className="
+              text-xs
+              font-extrabold
+              tracking-[.35em]
+              inline-block
+              mr-8
+              ">
+          PET TATTOO R$500
+        </span>
+      </div>
     </div>
   )
 }

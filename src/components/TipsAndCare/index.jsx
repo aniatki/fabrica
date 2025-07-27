@@ -17,6 +17,9 @@ import {
   SunDim,
   OctagonAlert,
   FishOff,
+  AlarmClock,
+  Clock12,
+  ClockFading,
 } from "lucide-react"
 
 import Tips from './Tips.jsx'
@@ -25,7 +28,7 @@ export default function TipsAndCare() {
 
   const preTattoo = [
     <Sun />,
-    `Avoid sunshine in the tattoo area.`,
+    'Avoid sunshine in the tattoo area.',
     <Droplet />,
     'Use moisturizer a few days before to allow pigmentation to be applied.',
     <Slice />,
@@ -69,30 +72,39 @@ export default function TipsAndCare() {
   ]
 
   return (
-    <div className='col-span-8 col-start-2 grid grid-cols-subgrid gap-x-8 gap-y-16'>
-      <h3 className='col-span-full text-4xl font-semibold text-center tracking-tight mb-8'>Tips and Care</h3>
+    <div className='col-span-full px-4 md:px-0 md:col-span-8 md:col-start-2 grid grid-cols-subgrid gap-x-8 gap-y-16'>
+      <h3 className='order-1 col-span-full text-4xl font-semibold text-center tracking-tighter'>Tips and Care</h3>
 
-      <div className='col-span-4 shadow-xl'>
+      <div className='order-2 col-span-full md:col-span-4 shadow-xl'>
         <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/4123838/pexels-photo-4123838.jpeg?_gl=1*1k2ncpy*_ga*MjA5NzUxMTEzMi4xNzUyMTc5MDEw*_ga_8JE65Q40S6*czE3NTM1MzgyMDAkbzgkZzEkdDE3NTM1MzkwODgkajE2JGwwJGgw" alt="" />
       </div>
-      <div className='col-span-4'>
-        <h4 className='mb-4 font-bold text-xl tracking-tight'>Pre-Tattoo</h4>
+      <div className='order-3 col-span-full md:col-span-4'>
+        <h4 className='mb-4 font-bold text-xl tracking-tight flex gap-2'>
+          <AlarmClock />
+          Pré-Tattoo
+        </h4>
         <Tips list={preTattoo} />
       </div>
 
-      <div className='col-span-4'>
-        <h4 className='mb-4 font-bold text-xl tracking-tight'>During Tattoo</h4>
+      <div className='order-4 md:order-5 col-span-full md:col-span-4 shadow-xl'>
+        <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/4123838/pexels-photo-4123838.jpeg?_gl=1*1k2ncpy*_ga*MjA5NzUxMTEzMi4xNzUyMTc5MDEw*_ga_8JE65Q40S6*czE3NTM1MzgyMDAkbzgkZzEkdDE3NTM1MzkwODgkajE2JGwwJGgw" alt="" />
+      </div>
+      <div className='order-5 md:order-4 col-span-full md:col-span-4'>
+        <h4 className='mb-4 font-bold text-xl tracking-tight flex gap-2'>
+          <Clock12 />
+          Durante a Tattoo
+        </h4>
         <Tips list={duringTattoo} />
       </div>
-      <div className='col-span-4 shadow-xl'>
-        <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/4123838/pexels-photo-4123838.jpeg?_gl=1*1k2ncpy*_ga*MjA5NzUxMTEzMi4xNzUyMTc5MDEw*_ga_8JE65Q40S6*czE3NTM1MzgyMDAkbzgkZzEkdDE3NTM1MzkwODgkajE2JGwwJGgw" alt="" />
-      </div>
 
-      <div className='col-span-4 shadow-xl'>
+      <div className='order-6 col-span-full md:col-span-4 shadow-xl'>
         <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/4123838/pexels-photo-4123838.jpeg?_gl=1*1k2ncpy*_ga*MjA5NzUxMTEzMi4xNzUyMTc5MDEw*_ga_8JE65Q40S6*czE3NTM1MzgyMDAkbzgkZzEkdDE3NTM1MzkwODgkajE2JGwwJGgw" alt="" />
       </div>
-      <div className='col-span-4'>
-        <h4 className='mb-4 font-bold text-xl tracking-tight'>Post-Tattoo</h4>
+      <div className='order-7 col-span-full md:col-span-4'>
+        <h4 className='mb-4 font-bold text-xl tracking-tight flex gap-2'>
+          <ClockFading />
+          Post-Tattoo
+        </h4>
         <Tips list={postTattoo} />
       </div>
 
