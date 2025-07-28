@@ -1,0 +1,42 @@
+
+.timeline{
+    position: relative;
+    text-wrap: balance;
+}
+
+.timeline::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    width: .25em;
+    border-radius: 1em;
+    height: 100%;
+    background: var(--color-amber-600);
+    transform: translateX(-50%);
+}
+
+.timeline>div>h4 {
+    position: relative;
+}
+
+.timeline>div>h4::after {
+    position: absolute;
+    content: "";
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 100%;
+    border: .2em solid var(--color-amber-600);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    --translate: 130%;
+}
+
+.timeline>div:nth-child(odd)>h4::after {
+    right: 0;
+    transform: translateX(var(--translate));
+}
+
+.timeline>div:nth-child(even)>h4:after {
+    left: 0;
+    transform: translateX(calc(-1 * var(--translate)));
+}

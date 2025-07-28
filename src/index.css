@@ -6,4 +6,10 @@
 
 html {
     font-family: "Inter", system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--color-gray-700);
+    color: var(--color-gray-100);
 }

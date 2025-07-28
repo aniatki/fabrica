@@ -1,12 +1,12 @@
 import {
   Sun,
   Droplet,
-  Slice, 
-  BeerOff, 
-  Salad, 
-  Shirt, 
-  Droplets, 
-  GlassWater, 
+  Slice,
+  BeerOff,
+  Salad,
+  Shirt,
+  Droplets,
+  GlassWater,
   ShieldAlert,
   Activity,
   HeartHandshake,
@@ -28,55 +28,57 @@ export default function TipsAndCare() {
 
   const preTattoo = [
     <Sun />,
-    'Avoid sunshine in the tattoo area.',
+    'Evitar pegar sol na região que será tatuada.',
     <Droplet />,
-    'Use moisturizer a few days before to allow pigmentation to be applied.',
+    'Utilizar hidratantes dias antes, para que a pigmentação ocorra de forma bem aplicada.',
     <Slice />,
-    'If you have a razor allergy, shave the day before your tattoo, according to your preference.',
+    'Se você possui alergia a gilete, depile-se um dia antes da tatuagem de acordo com a sua preferência.',
     <BeerOff />,
-    'Avoid alcoholic beverages and pain suppressants at least 3 days before your tattoo.',
+    'Evitar ingerir bebidas alcoólicas, e analgésicos no mínimo 3 dias antes da tatuagem. Realizar uma alimentação saudável e ir à sessão bem alimentado.',
     <Salad />,
-    'Eat healthy and arrive well-fed to your session.',
+    'Realizar uma alimentação saudável e ir à sessão bem alimentado.',
     <Shirt />,
-    'Wear comfortable clothing.',
+    'Ir com roupa confortável.',
     <Droplets />,
-    'Do not apply ointments that promise pain reduction during the tattoo. Effect varies from person to person and they can influence pigmentation.',
+    'Não passar pomadas que prometem diminuir a dor durante a tatuagem, pois o efeito varia de pessoa para pessoa e pode influenciar na pigmentação.',
   ]
+
   const duringTattoo = [
     <GlassWater />,
-    'While getting your tattoo, make it a habit to drink water. It helps hydrate your skin.',
+    'Durante a tatuagem, tenha o hábito de ir bebendo água, ajuda na hidratação da pele.',
     <ShieldAlert />,
-    "Avoid pulling on the limb being tattooed, as there's a high chance of damage to the artwork.",
+    "Evite puxar o membro que está sendo tatuado, pois há uma grande chance de prejudicar a arte.",
     <Activity />,
-    "If you feel a lot of pain, let the tattoo artist know and ask for a break.",
+    "No caso de sentir muita dor durante a tatuagem, comunique o tatuador e peça uma pausa.",
     <HeartHandshake />,
-    'Stay in a position that is comfortable for you and the tattoo artist.',
-    <BeerOff/>,
-    'Do not drink alcoholic beverages during the tattoo.',
+    'Fique em uma posição que seja confortável para você e o tatuador.',
+    <BeerOff />,
+    'Não ingerir bebidas alcoólicas durante a tatuagem.',
     <Lightbulb />,
-    'Tell the artist about your next tattoo idea so the artist can develop that unique work!',
+    'E claro, conte sua próxima ideia de tatuagem para o tatuador desenvolver aquele trabalho exclusivo!',
   ]
+
   const postTattoo = [
     <Bubbles />,
-    'Clean your hands thoroughly before touching your tattoo. When cleaning the tattoo area, always use a mild soap without rubbing.',
+    'Higienize bem as mãos antes de tocar na tatuagem. Sempre que for higienizar o local da tatuagem, utilize um sabonete neutro sem esfregar.',
     <FlaskConical />,
-    'While healing, use medications such as Bepantriz, Nebacetim, Coconut Oil, and/or Petroleum Jelly on the tattoo area.',
+    'Durante a cicatrização, utilize na região da tatuagem medicamentos como: Bepantriz, Nebacetin, óleo de coco e/ou vaselina. Não coce ou arranque as casquinhas.',
     <WavesLadder />,
-    'Do not scratch or pick at scabs. Avoid swimming pools, saunas, the ocean, and rivers during the healing process.',
-    <SunDim/>,
-    'Avoid exposing the tattoo to the sun for 20 days. After healing is complete, when exposing your tattoo to the sun, use sunscreen.',
+    'Evite frequentar durante o processo de cicatrização: piscinas, saunas, mar e rios.',
+    <SunDim />,
+    'Evite expor a tatuagem ao sol por 20 dias. Após a cicatrização completa, ao expor a tatuagem ao sol, utilize filtro solar.',
     <OctagonAlert />,
-    'Do not use products containing alcohol, green acids, or exfoliation on the tattoo area.',
+    'Não utilize produtos que contenham álcool, ácidos ou esfoliação na área da tatuagem.',
     <FishOff />,
-    'Avoid fatty foods and seafood.',
+    'Evite alimentos gordurosos, frutos do mar e carne de porco.',
   ]
 
   return (
-    <div className='col-span-full px-4 md:px-0 md:col-span-8 md:col-start-2 grid grid-cols-subgrid gap-x-8 gap-y-16'>
+    <div id="tips&care" className='col-span-full px-4 md:px-0 md:col-span-8 md:col-start-2 grid grid-cols-subgrid gap-x-8 gap-y-16'>
       <h3 className='order-1 col-span-full text-4xl font-semibold text-center tracking-tighter'>Tips and Care</h3>
 
       <div className='order-2 col-span-full md:col-span-4 shadow-xl'>
-        <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/4123838/pexels-photo-4123838.jpeg?_gl=1*1k2ncpy*_ga*MjA5NzUxMTEzMi4xNzUyMTc5MDEw*_ga_8JE65Q40S6*czE3NTM1MzgyMDAkbzgkZzEkdDE3NTM1MzkwODgkajE2JGwwJGgw" alt="" />
+        <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/1181366/pexels-photo-1181366.jpeg" alt="" />
       </div>
       <div className='order-3 col-span-full md:col-span-4'>
         <h4 className='mb-4 font-bold text-xl tracking-tight flex gap-2'>
@@ -87,23 +89,23 @@ export default function TipsAndCare() {
       </div>
 
       <div className='order-4 md:order-5 col-span-full md:col-span-4 shadow-xl'>
-        <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/4123838/pexels-photo-4123838.jpeg?_gl=1*1k2ncpy*_ga*MjA5NzUxMTEzMi4xNzUyMTc5MDEw*_ga_8JE65Q40S6*czE3NTM1MzgyMDAkbzgkZzEkdDE3NTM1MzkwODgkajE2JGwwJGgw" alt="" />
+        <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/428105/pexels-photo-428105.jpeg" alt="" />
       </div>
       <div className='order-5 md:order-4 col-span-full md:col-span-4'>
         <h4 className='mb-4 font-bold text-xl tracking-tight flex gap-2'>
           <Clock12 />
-          Durante a Tattoo
+          Durante Uma Tatuagem
         </h4>
         <Tips list={duringTattoo} />
       </div>
 
       <div className='order-6 col-span-full md:col-span-4 shadow-xl'>
-        <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/4123838/pexels-photo-4123838.jpeg?_gl=1*1k2ncpy*_ga*MjA5NzUxMTEzMi4xNzUyMTc5MDEw*_ga_8JE65Q40S6*czE3NTM1MzgyMDAkbzgkZzEkdDE3NTM1MzkwODgkajE2JGwwJGgw" alt="" />
+        <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/7147836/pexels-photo-7147836.jpeg" alt="" />
       </div>
       <div className='order-7 col-span-full md:col-span-4'>
         <h4 className='mb-4 font-bold text-xl tracking-tight flex gap-2'>
           <ClockFading />
-          Post-Tattoo
+          Pós-Tatuagem
         </h4>
         <Tips list={postTattoo} />
       </div>

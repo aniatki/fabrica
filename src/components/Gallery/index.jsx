@@ -1,7 +1,7 @@
 
 export default function Grid() {
     return (
-        <div className='col-span-full md:col-span-8 px-2 md:px-0 md:col-start-2 mt-32 grid grid-cols-8 gap-4 max-w-full mx-auto'>
+        <div id="projetos" className='col-span-full md:col-span-8 px-2 md:px-0 md:col-start-2 mt-32 grid grid-cols-8 gap-4 max-w-full mx-auto'>
 
             <img
                 src="https://images.pexels.com/photos/1304469/pexels-photo-1304469.jpeg"
@@ -33,7 +33,7 @@ export default function Grid() {
                 muted
                 loop
                 src="https://videos.pexels.com/video-files/1086524/1086524-hd_1280_720_25fps.mp4"
-                className='object-cover shadow-2xl col-span-full sm:col-span-4 md:col-span-4 md:row-span-2 col-start-1 md:row-start-7'
+                className='object-cover shadow-2xl col-span-full sm:col-span-full md:col-span-4 md:row-span-2 col-start-1 md:row-start-7'
             >
             </video>
 
@@ -42,7 +42,7 @@ export default function Grid() {
                 muted
                 loop
                 src="https://videos.pexels.com/video-files/4125976/4125976-uhd_1440_2732_25fps.mp4"
-                className='shadow-2xl col-span-full sm:col-span-4 md:col-span-4 md:row-span-5 md:col-start-5 md:row-start-7'
+                className='shadow-2xl col-span-full sm:-order-1 sm:col-span-4 md:col-span-4 md:row-span-5 md:col-start-5 md:row-start-7'
             >
             </video>
 

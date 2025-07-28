@@ -1,11 +1,12 @@
 import './App.css'
+import AboutMe from "./components/AboutMe"
+import Budget from './components/Budget'
 import Gallery from "./components/Gallery"
 import Marquee from "./components/Marquee"
 import NavBar from "./components/Navbar"
 import TipsAndCare from "./components/TipsAndCare"
 
 export default function App() {
-
   return (
     <div className='grid grid-cols-10 overflow-hidden bg-sky-50'>
       <Marquee />
@@ -42,19 +43,13 @@ export default function App() {
 
       <div className="image bg-size-[100%] md:bg-cover"></div>
 
+      <Budget />
+      
       <TipsAndCare />
 
       <Gallery />
 
-      <div className='col-span-full px-2 md:px-0 md:col-span-8 md:col-start-2 text-gray-800 my-16'>
-
-        <h3 className='order-1 col-span-full text-4xl font-semibold text-center tracking-tighter'>Sobre Mim</h3>
-        <p className='font-medium tracking-tight text-gray-700'>
-          Sou um tatuador apaixonado pela arte e pela expressão pessoal. Com anos de experiência, especializo-me em transformar ideias e sentimentos em tatuagens únicas e significativas.
-          Meu estilo combina precisão, criatividade e atenção aos detalhes, garantindo que cada peça seja exclusiva e reflita a personalidade de quem a carrega.
-          Trabalho com técnicas variadas, desde o tradicional ao realismo, sempre priorizando a qualidade, higiene e conforto dos meus clientes.
-          Para mim, tatuar é mais do que um ofício—é uma forma de contar histórias na pele.</p>
-      </div>
+      <AboutMe />
 
     </div>
   )
