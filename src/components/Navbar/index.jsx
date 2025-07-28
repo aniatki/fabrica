@@ -33,7 +33,7 @@ export default function NavBar() {
     }, [open])
 
     return (
-        <nav className='col-span-full px-2 md:px-0 md:col-span-8 md:col-start-2 text-gray-800'>
+        <nav className={`col-span-full px-2 md:px-0 md:col-span-8 md:col-start-2 text-gray-800`}>
             <ul className='flex justify-between items-center h-20'>
                 <li className={`text-2xl font-bold tracking-tighter hover:text-gray-500 flex items-center gap-2 transition`}>
                     <a href="/"><img className="w-12 mix-blend-darken hover:scale-110 transition" src={signature} alt="" /></a>
@@ -48,7 +48,7 @@ export default function NavBar() {
                         </a>
                     </li>
                 ))}
-                <div className="block sm:hidden">
+                <div className="sm:hidden">
                     <div className="relative z-50">
                         <button
                             onClick={() => setOpen(!open)}

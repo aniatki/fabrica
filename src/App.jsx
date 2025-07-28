@@ -44,13 +44,16 @@ export default function App() {
       <div className="image bg-size-[100%] md:bg-cover"></div>
 
       <Budget />
-      
+
       <TipsAndCare />
 
       <Gallery />
 
       <AboutMe />
 
+      <footer className='col-span-full font-medium tracking-tight text-xs text-balance text-center pb-8'>
+        Created by <a href="https://atki.ie/">Hasan Atki &copy; {Date().slice(11,15)}</a>
+        </footer>
     </div>
   )
 }
