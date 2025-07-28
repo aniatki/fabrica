@@ -13,10 +13,17 @@
     background: var(--color-amber-600);
     transform: translateX(-50%) scaleY(0);
     transform-origin: top;
-    animation: timeline-grow 45s ease-in-out forwards;
 }
 
-@keyframes timeline-grow { to { transform: translateX(-50%) scaleY(1); } }
+@keyframes timeline-grow {
+    to {
+        transform: translateX(-50%) scaleY(1);
+    }
+}
+
+.timelineGrow::after {
+  animation: timeline-grow 2s forwards ease-in-out;
+}
 
 .timeline>div>h4 {
     position: relative;

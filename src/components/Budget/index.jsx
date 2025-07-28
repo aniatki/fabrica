@@ -17,7 +17,7 @@ export default function Budget() {
                     <h4 className="text-3xl font-bold">Reserva!</h4>
                 </div>
                 <p className="text-md mt-8">
-                    Para realizar um agendamento, pedimos um sinal na hora da reserva para garantir o dia e horário desejado. Proporcionando um atendimento exclusivo a cada cliente. Entre em contato para viver uma experiencia única, tatuando oque sempre sonhou.
+                    Para realizar um agendamento, pedimos um sinal na hora da reserva para garantir o dia e horário desejado. Proporcionando um atendimento exclusivo a cada cliente. Entre em contato para viver uma experiencia única, tatuando o que sempre sonhou.
                 </p>
             </aside>
             <div className="

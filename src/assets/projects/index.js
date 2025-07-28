@@ -1,0 +1,16 @@
+import anchor from './anchor.jpg'
+import brothers from './brothers.jpg'
+import cat from './cat.jpg'
+import dory from './dory.jpg'
+import dragon from './dragon.jpg'
+import family from './family.jpg'
+import lotus from './lotus.jpg'
+import mystic from './mystic.jpg'
+import puppy from './puppy.jpg'
+import sketch from './sketch.jpg'
+import snake from './snake.jpg'
+import spider from './spider.jpg'
+import star from './star.jpg'
+import tiger from './tiger.jpg'
+
+export { anchor, brothers, cat, dory, dragon, family, lotus, mystic, puppy, sketch, snake, spider, star, tiger }

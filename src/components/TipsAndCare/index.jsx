@@ -34,13 +34,13 @@ export default function TipsAndCare() {
     <Slice />,
     'Se você possui alergia a gilete, depile-se um dia antes da tatuagem de acordo com a sua preferência.',
     <BeerOff />,
-    'Evitar ingerir bebidas alcoólicas, e analgésicos no mínimo 3 dias antes da tatuagem. Realizar uma alimentação saudável e ir à sessão bem alimentado.',
+    'Evitar ingerir bebidas alcoólicas e analgésicos no mínimo 3 dias antes da tatuagem.',
     <Salad />,
     'Realizar uma alimentação saudável e ir à sessão bem alimentado.',
     <Shirt />,
     'Ir com roupa confortável.',
     <Droplets />,
-    'Não passar pomadas que prometem diminuir a dor durante a tatuagem, pois o efeito varia de pessoa para pessoa e pode influenciar na pigmentação.',
+    'Não passar pomadas que prometem diminuir a dor durante a tatuagem, pois, o efeito varia de pessoa para pessoa e pode influenciar na pigmentação.',
   ]
 
   const duringTattoo = [
@@ -84,7 +84,7 @@ export default function TipsAndCare() {
       <div className='order-3 col-span-full md:col-span-4'>
         <h4 className='mb-4 font-bold text-xl tracking-tight flex gap-2'>
           <AlarmClock />
-          Pré-Tattoo
+          Pré-Tatuagem
         </h4>
         <Tips list={preTattoo} />
       </div>
@@ -95,7 +95,7 @@ export default function TipsAndCare() {
       <div className='order-5 md:order-4 col-span-full md:col-span-4'>
         <h4 className='mb-4 font-bold text-xl tracking-tight flex gap-2'>
           <Clock12 />
-          Durante Uma Tatuagem
+          Durante a Tatuagem
         </h4>
         <Tips list={duringTattoo} />
       </div>

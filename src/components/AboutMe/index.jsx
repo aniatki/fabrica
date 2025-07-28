@@ -1,14 +1,48 @@
 import styles from "./AboutMe.module.css"
+import avatar from "../../assets/avatar.png"
+import { useEffect, useRef, useState } from "react"
 
 export default function AboutMe() {
+  const timelineRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (!timelineRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    observer.observe(timelineRef.current);
+
+    return () => {
+      observer.disconnect()
+    };
+  }, []);
+
   return (
     <div id="quemsou" className='col-span-full px-2 md:px-0 md:col-span-8 md:col-start-2 my-16 tracking-tight font-medium text-gray-700'>
 
       <h3 className='order-1 col-span-full text-4xl font-semibold text-center tracking-tighter'>Quem sou?</h3>
+      <div className={`w-[4em] place-self-center my-4`}>
+        <img className="intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-y-in-100 intersect:motion-blur-in-md mix-blend-luminosity" src={avatar} alt="" />
+      </div>
       <p>
-        Brasileiro, casado, apaixonado por desenhos e tatuagens desde a adolescência. Sempre com foco em proporcionar um resultado meus clientes, buscando uma evolução diaria em minha vida.</p>
+        Brasileiro, casado, apaixonado por desenhos e tatuagens desde a adolescência. Sempre com foco em proporcionar um resultado meus clientes, buscando uma evolução diaria em minha vida.
+      </p>
 
-      <div className={`${styles.timeline} grid grid-cols-8 gap-x-8 intersect-once intersect:motion-preset-expand`}>
+      <div ref={timelineRef} className={`${styles.timeline}
+          grid grid-cols-8 gap-x-8
+          transition-all duration-700 ease-out will-change-transform
+          ${isVisible ? styles.timelineGrow : ""}`}>
 
         <div className='col-span-4 col-start-1 row-start-1 text-right'>
           <h4 className="text-amber-600 font-bold">Começo!</h4>
