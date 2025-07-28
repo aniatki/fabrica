@@ -8,7 +8,7 @@ export default function AboutMe() {
       <p>
         Brasileiro, casado, apaixonado por desenhos e tatuagens desde a adolescência. Sempre com foco em proporcionar um resultado meus clientes, buscando uma evolução diaria em minha vida.</p>
 
-      <div className={`${styles.timeline} grid grid-cols-8 gap-x-8`}>
+      <div className={`${styles.timeline} grid grid-cols-8 gap-x-8 intersect-once intersect:motion-preset-expand`}>
 
         <div className='col-span-4 col-start-1 row-start-1 text-right'>
           <h4 className="text-amber-600 font-bold">Começo!</h4>
@@ -50,7 +50,7 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-      <div className='text-3xl col-span-full row-start-7 p-4 text-center text-balance'>
+      <div className='text-3xl col-span-full row-start-7 p-4 text-center text-balance intersect-once intersect:motion-translate-y-in-100 motion-ease-bounce'>
         <p>Eu Fabricio, te convido a estar comigo nessa nova caminhada, acompanhando todo o meu progresso e fazendo sonhos e ideias de arte se tornarem realidade na pele.
         </p>
         <p>Muito bem vindo(a)!</p>

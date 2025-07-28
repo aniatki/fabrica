@@ -1,5 +1,4 @@
-
-.timeline{
+.timeline {
     position: relative;
     text-wrap: balance;
 }
@@ -12,8 +11,12 @@
     border-radius: 1em;
     height: 100%;
     background: var(--color-amber-600);
-    transform: translateX(-50%);
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    animation: timeline-grow 45s ease-in-out forwards;
 }
+
+@keyframes timeline-grow { to { transform: translateX(-50%) scaleY(1); } }
 
 .timeline>div>h4 {
     position: relative;

@@ -74,8 +74,9 @@ export default function TipsAndCare() {
   ]
 
   return (
-    <div id="tips&care" className='col-span-full px-4 md:px-0 md:col-span-8 md:col-start-2 grid grid-cols-subgrid gap-x-8 gap-y-16'>
-      <h3 className='order-1 col-span-full text-4xl font-semibold text-center tracking-tighter'>Tips and Care</h3>
+    <div id="tips&care" className='col-span-full px-4 md:px-0 md:col-span-8 md:col-start-2 grid grid-cols-subgrid gap-x-8 gap-y-16 intersect-once intersect:motion-preset-slide-up motion-delay-400 
+                                        motion-duration-500'>
+      <h3 className='order-1 col-span-full text-4xl font-semibold text-center tracking-tighter '>Tips and Care</h3>
 
       <div className='order-2 col-span-full md:col-span-4 shadow-xl'>
         <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/1181366/pexels-photo-1181366.jpeg" alt="" />

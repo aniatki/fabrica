@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "tailwindcss-motion";
+@plugin "tailwindcss-intersect";
 
 @theme {
     --color-amber-650: oklch(59.4% 0.188 48.318);
