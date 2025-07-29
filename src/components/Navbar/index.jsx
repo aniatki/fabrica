@@ -65,7 +65,7 @@ export default function NavBar() {
                                 />
                                 <div
                                     ref={menuRef}
-                                    className="fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-50"
+                                    className="fixed top-0 left-0 w-full h-full bg-white/70 backdrop-blur-sm transition-all flex items-top pt-48 justify-center z-50"
                                 >
                                     <ul className="flex flex-col gap-6 text-center">
                                         {navItems.map((el, index) => (
