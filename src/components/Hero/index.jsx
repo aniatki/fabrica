@@ -29,7 +29,9 @@ export default function Hero() {
               transition
               intersect-once intersect:motion-preset-slide-up motion-delay-200 motion-duration-500
               "
-                href="https://api.whatsapp.com/message/7HMDLIUYKSH3B1?autoload=1&app_absent=0">
+                href="https://api.whatsapp.com/message/7HMDLIUYKSH3B1?autoload=1&app_absent=0"
+                target='_blank'
+                >
                 Inspire-se
                 <ExternalLinkIcon strokeWidth={3} size={20} />
             </a>
