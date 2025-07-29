@@ -3,30 +3,42 @@ import avatar from "../../assets/avatar.png"
 import { useEffect, useRef, useState } from "react"
 
 export default function AboutMe() {
-  const timelineRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
+  const timelineRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const [extense, setExtense] = useState("")
+  let index = 0
+  
   useEffect(() => {
-    if (!timelineRef.current) return;
-
+    if (!timelineRef.current) return
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
+          setIsVisible(true)
+          observer.unobserve(entry.target)
         }
       },
       {
         threshold: 0.3,
       }
-    );
-
-    observer.observe(timelineRef.current);
-
+    )
+    
+    observer.observe(timelineRef.current)
+    
     return () => {
       observer.disconnect()
-    };
-  }, []);
+    }
+  }, [])
+  
+  useEffect(() => {
+    const sequence = ["o", "a"]
+    const interval = setInterval(() => {
+      setExtense(sequence[index % sequence.length])
+      index++
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [index])
 
   return (
     <div id="quemsou" className='col-span-full px-2 md:px-0 md:col-span-8 md:col-start-2 my-16 tracking-tight font-medium text-gray-700'>
@@ -84,10 +96,10 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-      <div className='text-3xl col-span-full row-start-7 p-4 text-center text-balance intersect-once intersect:motion-translate-y-in-100 motion-ease-bounce'>
-        <p>Eu Fabricio, te convido a estar comigo nessa nova caminhada, acompanhando todo o meu progresso e fazendo sonhos e ideias de arte se tornarem realidade na pele.
+      <div className='col-span-full max-w-xl mx-auto p-4 text-center leading-16 font-["Lavishly_Yours"] intersect-once intersect:motion-preset-compress motion-delay-2000 motion-duration-400'>
+        <p className="text-4xl">Eu Fabricio, te convido a estar comigo nessa nova caminhada, acompanhando todo o meu progresso e fazendo sonhos e ideias de arte se tornarem realidade na pele.
         </p>
-        <p>Muito bem vindo(a)!</p>
+        <p className="max-w-max mx-auto text-6xl">Seja bem vind{extense}!</p>
       </div>
     </div>
   )

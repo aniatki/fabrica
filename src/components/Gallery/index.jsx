@@ -10,8 +10,8 @@ import {
     // sketch, 
     // snake, 
     spider, 
-    // star, 
-    // tiger 
+    star, 
+    tiger 
 } from '../../assets/projects'
 
 export default function Grid() {
@@ -53,27 +53,19 @@ export default function Grid() {
                 intersect-once intersect:motion-preset-expand motion-duration-500 motion-delay-250
                 ' />
 
-            <video
-                autoPlay={true}
-                muted
-                loop
-                src="https://videos.pexels.com/video-files/1086524/1086524-hd_1280_720_25fps.mp4"
+            <img
+                src={star}
+                alt=""
                 className='object-cover shadow-2xl col-span-full sm:col-span-full md:col-span-4 md:row-span-2 col-start-1 md:row-start-7
-                intersect-once intersect:motion-preset-expand motion-duration-500 motion-delay-250
-                '
-            >
-            </video>
+                intersect-once intersect:motion-preset-expand motion-duration-500 motion-delay-250'
+            />
 
-            <video
-                autoPlay={true}
-                muted
-                loop
-                src="https://videos.pexels.com/video-files/4125976/4125976-uhd_1440_2732_25fps.mp4"
-                className='shadow-2xl col-span-full sm:-order-1 sm:col-span-4 md:col-span-4 md:row-span-5 md:col-start-5 md:row-start-7
+            <img
+                src={tiger}
+                className='object-cover shadow-2xl col-span-full sm:-order-1 sm:col-span-4 md:col-span-4 md:row-span-5 md:col-start-5 md:row-start-7
                 intersect-once intersect:motion-preset-expand motion-duration-500 motion-delay-250
                 '
-            >
-            </video>
+            />
 
             <img
                 src={cat}

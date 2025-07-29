@@ -21,11 +21,10 @@ import {
   Clock12,
   ClockFading,
 } from "lucide-react"
-
+import { useEffect, useRef } from "react"
 import Tips from './Tips.jsx'
 
 export default function TipsAndCare() {
-
   const preTattoo = [
     <Sun />,
     'Evitar pegar sol na região que será tatuada.',
@@ -72,11 +71,22 @@ export default function TipsAndCare() {
     <FishOff />,
     'Evite alimentos gordurosos, frutos do mar e carne de porco.',
   ]
+  const divRef = useRef(null)
+  const transitionClasses = ["intersect-once", "intersect:motion-preset-focus", "motion-delay-400", "motion-duration-1000"]
+
+  useEffect(() => {
+    if (divRef.current && divRef.current.children) {
+      Array.from(divRef.current.children).forEach(child => {
+        transitionClasses.forEach(c => child.classList.add(c))
+      })
+    }
+  })
 
   return (
-    <div id="tips&care" className='col-span-full px-4 md:px-0 md:col-span-8 md:col-start-2 grid grid-cols-subgrid gap-x-8 gap-y-16 intersect-once intersect:motion-preset-slide-up motion-delay-400 
-                                        motion-duration-500'>
-      <h3 className='order-1 col-span-full text-4xl font-semibold text-center tracking-tighter '>Tips and Care</h3>
+    <div
+        ref={divRef} 
+        id="tips&care" className='col-span-full px-4 md:px-0 md:col-span-8 md:col-start-2 grid grid-cols-subgrid gap-x-8 gap-y-16'>
+      <h3 className='order-1 col-span-full text-4xl font-semibold text-center tracking-tighter'>Tips and Care</h3>
 
       <div className='order-2 col-span-full md:col-span-4 shadow-xl'>
         <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/1181366/pexels-photo-1181366.jpeg" alt="" />
